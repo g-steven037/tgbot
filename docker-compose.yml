@@ -1,0 +1,12 @@
+services:
+  tmdb-bot:
+    build: .
+    container_name: movie_poster_bot
+    restart: always
+    environment:
+      - TELEGRAM_TOKEN=这里换成你的_BOT_TOKEN
+      - TMDB_API_KEY=这里换成你的_TMDB_API_KEY
+      - FONT_PATH=/app/simhei.ttf
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./simhei.ttf:/app/simhei.ttf
